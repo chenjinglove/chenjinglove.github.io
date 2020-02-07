@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xuguo.top">
-  <title>Xu &amp; Blog</title>
+  <title>Archives: 2019/10 | Xu &amp; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="某石油大学软件工程在读大学生，Java后端学习者，前端不太涉足，此博客用来记录学习与生活。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xu &amp; Blog">
-<meta property="og:url" content="http://xuguo.top/index.html">
+<meta property="og:url" content="http://xuguo.top/archives/2019/10/index.html">
 <meta property="og:site_name" content="Xu &amp; Blog">
 <meta property="og:description" content="某石油大学软件工程在读大学生，Java后端学习者，前端不太涉足，此博客用来记录学习与生活。">
 <meta property="article:author" content="许外城">
@@ -165,160 +165,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hexo博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo 博客搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-02-06T14:48:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>hexo 可以理解为是基于node.js制作的一个博客工具，不是我们理解的一个开源的博客系统。其中的差别，有点意思。<br>hexo 正常来说，不需要部署到我们的服务器上，我们的服务器上保存的，其实是基于在hexo通过markdown编写的文章，然后hexo帮我们生成静态的html页面，然后，将生成的html上传到我们的服务器。简而言之：hexo是个静态页面生成、上传的工具。</p>
-<h2 id="详细安装步骤"><a href="#详细安装步骤" class="headerlink" title="详细安装步骤"></a>详细安装步骤</h2><h3 id="一-在GitHub上新建仓库"><a href="#一-在GitHub上新建仓库" class="headerlink" title="一.在GitHub上新建仓库"></a>一.在GitHub上新建仓库</h3><h2 id=""><a href="#" class="headerlink" title=""></a><img src="/assets/blogImg/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.jpg" alt="avatar"></h2><h3 id="二-官网上下载Node-js，Git工具"><a href="#二-官网上下载Node-js，Git工具" class="headerlink" title="二.官网上下载Node.js，Git工具"></a>二.官网上下载Node.js，Git工具</h3><p>前言中说到，hexo是需要node.js的支持<br><img src="/assets/blogImg/%E6%9F%A5%E7%9C%8Bnode%E7%89%88%E6%9C%AC.jpg" alt="avatar"></p>
-<hr>
-<h3 id="三-安装淘宝镜像源"><a href="#三-安装淘宝镜像源" class="headerlink" title="三.安装淘宝镜像源"></a>三.安装淘宝镜像源</h3><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="/assets/blogImg/%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F.jpg" alt="avatar"></h2><h3 id="四-全局安装hexo"><a href="#四-全局安装hexo" class="headerlink" title="四.全局安装hexo"></a>四.全局安装hexo</h3><p>命令：<code>cnpm install -g hexo-cli</code><br><img src="/assets/blogImg/hexo%E7%9A%84%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF.jpg" alt="avatar"></p>
-<hr>
-<h3 id="五-新建一个blog文件夹"><a href="#五-新建一个blog文件夹" class="headerlink" title="五.新建一个blog文件夹"></a>五.新建一个blog文件夹</h3><p>利用之前下载好的工具，鼠标右键，选择Git Bash Here，跳出一个终端命令框，我们只需要输入<code>hexo init</code>命令即可。<br>等加载完成后，就可以在blog文件夹中看到生成的文件。<br><img src="/assets/blogImg/blog%E4%B8%AD%E6%96%87%E4%BB%B6.jpg" alt="avatar"></p>
-<hr>
-<h3 id="六-本地预览"><a href="#六-本地预览" class="headerlink" title="六.本地预览"></a>六.本地预览</h3><p>当我们已经完成了hexo的初始化之后，就可以在本地的4000端口在浏览器中预览我们生成的博客页面，如果看到下图的效果，<br>那么久恭喜你，已经完成了本地hexo的搭建。<br><img src="/assets/blogImg/%E9%A2%84%E8%A7%88%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" alt="avatar"></p>
-<hr>
-<h3 id="七-部署到GitHub"><a href="#七-部署到GitHub" class="headerlink" title="七.部署到GitHub"></a>七.部署到GitHub</h3><h4 id="1-安装Git部署插件"><a href="#1-安装Git部署插件" class="headerlink" title="1.安装Git部署插件"></a>1.安装Git部署插件</h4><p> 使用命令行<code>npm install --save hexo-deployer-git</code>即可<br> <img src="/assets/blogImg/%E5%AE%89%E8%A3%85Git%E6%8F%92%E4%BB%B6.jpg" alt="avatar"></p>
-<hr>
-<h4 id="2-设置站点配置文件-config-yml"><a href="#2-设置站点配置文件-config-yml" class="headerlink" title="2.设置站点配置文件-_config.yml"></a>2.设置站点配置文件-_config.yml</h4><p> 输入<code>vim _config.yml</code> 到文件的最底部，如下图操作。<br> <img src="/assets/blogImg/%E9%85%8D%E7%BD%AE%E7%AB%99%E7%82%B9%E6%96%87%E4%BB%B6.jpg" alt="avatar"></p>
-<hr>
-<h4 id="3-部署到远端"><a href="#3-部署到远端" class="headerlink" title="3.部署到远端"></a>3.部署到远端</h4><p> 输入命令<code>hexo d</code><br> <img src="/assets/blogImg/%E9%83%A8%E7%BD%B2%E8%BF%9C%E7%AB%AF.jpg" alt="avatar"></p>
-<hr>
-<h3 id="跟换主题"><a href="#跟换主题" class="headerlink" title="跟换主题"></a>跟换主题</h3><p>hexo默认的主题就是landscape，如果想要换其他的主题，GitHub上以及hexo都为我们提供了丰富的素材，只需clone到本地仓库<br>修改站点配置文件中的theme:___ 即可。</p>
-<hr>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>hexo的中文文档地址：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a><br>Jacman主题的使用文档:<a href="http://jacman.wuchong.me/2014/11/20/how-to-use-jacman/" target="_blank" rel="noopener">http://jacman.wuchong.me/2014/11/20/how-to-use-jacman/</a><br>yilia的下载地址：<a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a></p>
-<hr>
-        
-          <a class="article-more-a" href="/2020/02/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
+    
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Git实现代码远程托管" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/">Git实现代码远程托管</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/" class="archive-article-date">
   	<time datetime="2019-10-27T04:01:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="☀前言："><a href="#☀前言：" class="headerlink" title="☀前言："></a>☀前言：</h2><p>一直想将代码可以直接远程传到Github上，操作起来才发现原来我对Git是如此愚钝，今天忙活了几个小时，终于成功上传了第一个源码。<br>对Git的操作也有了一点了解，日后还是要好好学习一下git操作语言。<br>在这里还是对下午的苦逼操作做下总结，我的学习操作途径主要还是通过☛Git教程 - 廖雪峰的官方网☜+B站，B站上有个传智播客的视频，但是不是太完整。<br>个人感觉在建立连接方面讲的不是太详细。下面就回顾下我的操作过程。</p>
-<hr>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="Ⅰ-首先就是Git的安装"><a href="#Ⅰ-首先就是Git的安装" class="headerlink" title="Ⅰ.首先就是Git的安装"></a>Ⅰ.首先就是Git的安装</h3><p>这个就在<strong>官网</strong>下载就行了，安装过程也不是太复杂，在<strong>软件管家</strong>里面也可以直接安装。</p>
-<h3 id="Ⅱ-安装完成之后，就是来配置自己的个人Git仓库"><a href="#Ⅱ-安装完成之后，就是来配置自己的个人Git仓库" class="headerlink" title="Ⅱ.安装完成之后，就是来配置自己的个人Git仓库"></a>Ⅱ.安装完成之后，就是来配置自己的个人Git仓库</h3><h2 id="首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git-Bash-Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。"><a href="#首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git-Bash-Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。" class="headerlink" title="首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git Bash Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。"></a>首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的<em>Git Bash Here</em>，然后就会弹出个黑框框，在里面写git语句就可以实现操作。</h2><pre><code>❶.新建文件夹来作为你的本地仓库。可以直接用Windows创建，同样可以选择使用操作语句。
-以我的为例，在’美元‘符号后写入：`mkdir DBHelper` 就新建了一个文件。然后就进入这个文件夹中操作即可。
----
-❷.进行基础配置：绑定用户，邮箱 相应的语句：
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name “github’s Name”</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"github@xx.com"</span></span><br></pre></td></tr></table></figure>
----
-❸.通过命令`git init`把这个文件夹变成Git可管理的仓库。这时你会发现DBHelper里面多了个.git文件夹，它是Git用来*跟踪和管理版本库*的。
-如果你看不到，是因为它默认是隐藏文件，那你就需要设置一下让隐藏文件可见。（不会找度娘，操作挺简单）
----
-❹创建，上传文件到本地仓库。这时候你就可以把你的项目粘贴到这个本地Git仓库里面（粘贴后你可以通过`git status`来查看你当前的状态）.
-然后通过`git add`把项目添加到仓库（或`git add .`把该目录下的所有文件添加到仓库，注意点是用空格隔开的）。
-在这个过程中你其实可以一直使用`git status`来查看你当前的状态。要注意的是add过程是将文件传到暂存区。
-最后，用`git commit`把项目提交到仓库。-m后面引号里面是本次提交的注释内容，这个可以不写，但最好写上，不然会报错，详情自行找度娘。
-好了，我们本地Git仓库这边的工作做完了，下面就到了连接远程仓库（也就是连接Github）。
----
-❺.连接远程仓库：这个操作过程就借鉴了廖雪峰的官方网站，感觉照着操作还是比较简单：
-   ①.创建SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建:
-    `$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;`
-   ②.进入Github的主页面，找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。
-   ③.创建与远程仓库的关联：命令行：
-    `$ git remote add origin “远程仓库地址”`
----
-❻.上传文件：使用命令`git push origin master `等待一段时间，就可以上传，刷新一下GitHub页面，哇！神奇的神奇就发生了，代码就成功的上传！！</code></pre><hr>
-<h3 id="Ⅲ-注意事项："><a href="#Ⅲ-注意事项：" class="headerlink" title="Ⅲ.注意事项："></a>Ⅲ.注意事项：</h3><p>在最后上传的时候，Git可能会报错：<code>failed to push some refs to ‘’远程仓库‘</code>，原因就是你的仓库可能已经创建了一个READERME.md文件，或者仓库里面已经不为空。<br>这个时候就要使用命令行：<code>git pull --rebase origin master</code> 将内容合并，再push 一下就可以了。</p>
-<hr>
-<h3 id="Ⅳ-总结："><a href="#Ⅳ-总结：" class="headerlink" title="Ⅳ.总结："></a>Ⅳ.总结：</h3><h2 id="利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。"><a href="#利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。" class="headerlink" title="利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。"></a>利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。</h2><h3 id="Ⅴ-最后将一些学习资源的网址列在下边："><a href="#Ⅴ-最后将一些学习资源的网址列在下边：" class="headerlink" title="Ⅴ.最后将一些学习资源的网址列在下边："></a>Ⅴ.最后将一些学习资源的网址列在下边：</h3><p>廖雪峰的官方网站：<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416</a><br>B站教程：<a href="https://www.bilibili.com/video/av10475153/?p=8&amp;t=825" target="_blank" rel="noopener">https://www.bilibili.com/video/av10475153/?p=8&amp;t=825</a></p>
-<hr>
-        
-          <a class="article-more-a" href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/#more">more >></a>
-        
-      
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/">Git实现代码远程托管</a>
+    </h1>
+  
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -330,41 +204,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -386,9 +238,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
