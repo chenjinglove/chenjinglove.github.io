@@ -348,20 +348,9 @@
 <p><img src="C:%5CUsers%5Chp%5Cbolg%5Csource%5Cassets%5CblogImg%5CMD5%E5%8A%A0%E5%AF%86.jpg" alt=""></p>
 <hr>
 <h4 id="一-了解MD5"><a href="#一-了解MD5" class="headerlink" title="一.了解MD5"></a>一.了解MD5</h4><p>MD5即<strong>Message-Digest Algorithm 5(信息-摘要算法5)</strong>，用于确保信息传输完整一致。是计算机广泛使用的杂凑算法之一(又译摘要算法、哈希算法)，主流编程语言普遍已有MD5实现。将数据(如汉字)运算为另一固定长度值，是杂凑算法的基础原理，MD5的前身有MD2、MD3和MD4。</p>
-<hr>
-<p>MD5算法具有以下特点:</p>
-<p>1、压缩性:任意长度的数据，算出的MD5值长度都是固定的。</p>
-<p>2、容易计算:从原数据计算出MD5值很容易。</p>
-<p>3、抗修改性:对原数据进行任何改动，哪怕只修改1个字节，所得到的MD5值都有很大区别。</p>
-<p>4、强抗碰撞:已知原数据和其MD5值，想找到一个具有相同MD5值的数据(即伪造数据)是非常困难的。</p>
-<p>MD5的作用是让大容量信息在用数字签名软件签署私人密钥前被”压缩”成一种保密的格式(就是把一个任意长度的字节串变换成一定长的十六进制数字串)。除了MD5以外，其中比较有名的还有sha-1、RIPEMD以及Haval等。</p>
-<hr>
-<h4 id="二-代码实现"><a href="#二-代码实现" class="headerlink" title="二.代码实现"></a>二.代码实现</h4><p>写一个将字符串转成16进制MD5密文的函数：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">string</span> <span class="title">Md5</span>(<span class="params"><span class="keyword">string</span> str</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">MD5 md = MD5.Create();</span><br><span class="line"><span class="keyword">byte</span>[] butter = Encoding.Default.GetBytes(str);</span><br><span class="line"><span class="keyword">byte</span>[] newbutter = md.ComputeHash(butter);</span><br><span class="line"><span class="comment">//return Encoding.Default.GetString(newbutter);</span></span><br><span class="line"><span class="keyword">string</span> s = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; newbutter.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//Tostring("x2");将10进制转换成16进制</span></span><br><span class="line">s+= newbutter[i].ToString(<span class="string">"x2"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h5 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h5><p>接受md.ComputeHash(butter);的字节数组newbutter在转字符串时，要将字节数组的每一位先ToString；如果直接使用Encoding.Default.GetString(newbutter);则会出现乱码。</p>
-
+        
+          <a class="article-more-a" href="/2019/12/21/MD5%E5%8A%A0%E5%AF%86/#more">more >></a>
+        
       
 
       
@@ -660,15 +649,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">-C#学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-C#</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">-实用工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">-C#学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -677,6 +662,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">-C#</a>
               </li>
             
             <div class="clearfix"></div>
