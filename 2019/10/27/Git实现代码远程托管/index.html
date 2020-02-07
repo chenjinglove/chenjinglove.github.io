@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Xu &amp; Blog">
 <meta property="og:description" content="☀前言：一直想将代码可以直接远程传到Github上，操作起来才发现原来我对Git是如此愚钝，今天忙活了几个小时，终于成功上传了第一个源码。对Git的操作也有了一点了解，日后还是要好好学习一下git操作语言。在这里还是对下午的苦逼操作做下总结，我的学习操作途径主要还是通过☛Git教程 - 廖雪峰的官方网☜+B站，B站上有个传智播客的视频，但是不是太完整。个人感觉在建立连接方面讲的不是太详细。下面就回">
 <meta property="article:published_time" content="2019-10-27T04:01:51.000Z">
-<meta property="article:modified_time" content="2020-02-07T04:17:18.526Z">
+<meta property="article:modified_time" content="2020-02-07T04:22:17.700Z">
 <meta property="article:author" content="许外城">
 <meta property="article:tag" content="-实用工具">
 <meta name="twitter:card" content="summary">
@@ -180,35 +180,28 @@
       
         <h2 id="☀前言："><a href="#☀前言：" class="headerlink" title="☀前言："></a>☀前言：</h2><p>一直想将代码可以直接远程传到Github上，操作起来才发现原来我对Git是如此愚钝，今天忙活了几个小时，终于成功上传了第一个源码。<br>对Git的操作也有了一点了解，日后还是要好好学习一下git操作语言。<br>在这里还是对下午的苦逼操作做下总结，我的学习操作途径主要还是通过☛Git教程 - 廖雪峰的官方网☜+B站，B站上有个传智播客的视频，但是不是太完整。<br>个人感觉在建立连接方面讲的不是太详细。下面就回顾下我的操作过程。</p>
 <hr>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="Ⅰ-首先就是Git的安装"><a href="#Ⅰ-首先就是Git的安装" class="headerlink" title="Ⅰ.首先就是Git的安装"></a>Ⅰ.首先就是Git的安装</h3><p>这个就在<strong>官网</strong>下载就行了，安装过程也不是太复杂，在<strong>软件管家</strong>里面也可以直接安装。</p>
-<h3 id="Ⅱ-安装完成之后，就是来配置自己的个人Git仓库"><a href="#Ⅱ-安装完成之后，就是来配置自己的个人Git仓库" class="headerlink" title="Ⅱ.安装完成之后，就是来配置自己的个人Git仓库"></a>Ⅱ.安装完成之后，就是来配置自己的个人Git仓库</h3><h2 id="首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git-Bash-Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。"><a href="#首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git-Bash-Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。" class="headerlink" title="首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git Bash Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。"></a>首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的<em>Git Bash Here</em>，然后就会弹出个黑框框，在里面写git语句就可以实现操作。</h2><pre><code>❶.新建文件夹来作为你的本地仓库。可以直接用Windows创建，同样可以选择使用操作语句。
-以我的为例，在’美元‘符号后写入：`mkdir DBHelper` 就新建了一个文件。然后就进入这个文件夹中操作即可。
----
-❷.进行基础配置：绑定用户，邮箱 相应的语句：
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name “github’s Name”</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"github@xx.com"</span></span><br></pre></td></tr></table></figure>
----
-❸.通过命令`git init`把这个文件夹变成Git可管理的仓库。这时你会发现DBHelper里面多了个.git文件夹，它是Git用来*跟踪和管理版本库*的。
-如果你看不到，是因为它默认是隐藏文件，那你就需要设置一下让隐藏文件可见。（不会找度娘，操作挺简单）
----
-❹创建，上传文件到本地仓库。这时候你就可以把你的项目粘贴到这个本地Git仓库里面（粘贴后你可以通过`git status`来查看你当前的状态）.
-然后通过`git add`把项目添加到仓库（或`git add .`把该目录下的所有文件添加到仓库，注意点是用空格隔开的）。
-在这个过程中你其实可以一直使用`git status`来查看你当前的状态。要注意的是add过程是将文件传到暂存区。
-最后，用`git commit`把项目提交到仓库。-m后面引号里面是本次提交的注释内容，这个可以不写，但最好写上，不然会报错，详情自行找度娘。
-好了，我们本地Git仓库这边的工作做完了，下面就到了连接远程仓库（也就是连接Github）。
----
-❺.连接远程仓库：这个操作过程就借鉴了廖雪峰的官方网站，感觉照着操作还是比较简单：
-   ①.创建SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建:
-    `$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;`
-   ②.进入Github的主页面，找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。
-   ③.创建与远程仓库的关联：命令行：
-    `$ git remote add origin “远程仓库地址”`
----
-❻.上传文件：使用命令`git push origin master `等待一段时间，就可以上传，刷新一下GitHub页面，哇！神奇的神奇就发生了，代码就成功的上传！！</code></pre><hr>
-<h3 id="Ⅲ-注意事项："><a href="#Ⅲ-注意事项：" class="headerlink" title="Ⅲ.注意事项："></a>Ⅲ.注意事项：</h3><p>在最后上传的时候，Git可能会报错：<code>failed to push some refs to ‘’远程仓库‘</code>，原因就是你的仓库可能已经创建了一个READERME.md文件，或者仓库里面已经不为空。<br>这个时候就要使用命令行：<code>git pull --rebase origin master</code> 将内容合并，再push 一下就可以了。</p>
-<hr>
-<h3 id="Ⅳ-总结："><a href="#Ⅳ-总结：" class="headerlink" title="Ⅳ.总结："></a>Ⅳ.总结：</h3><h2 id="利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。"><a href="#利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。" class="headerlink" title="利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。"></a>利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。</h2><h3 id="Ⅴ-最后将一些学习资源的网址列在下边："><a href="#Ⅴ-最后将一些学习资源的网址列在下边：" class="headerlink" title="Ⅴ.最后将一些学习资源的网址列在下边："></a>Ⅴ.最后将一些学习资源的网址列在下边：</h3><p>廖雪峰的官方网站：<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416</a><br>B站教程：<a href="https://www.bilibili.com/video/av10475153/?p=8&amp;t=825" target="_blank" rel="noopener">https://www.bilibili.com/video/av10475153/?p=8&amp;t=825</a></p>
-<hr>
 <a id="more"></a>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><hr>
+<h3 id="Ⅰ-首先就是Git的安装"><a href="#Ⅰ-首先就是Git的安装" class="headerlink" title="Ⅰ.首先就是Git的安装"></a>Ⅰ.首先就是Git的安装</h3><hr>
+<h2 id="这个就在官网下载就行了，安装过程也不是太复杂，在软件管家里面也可以直接安装。"><a href="#这个就在官网下载就行了，安装过程也不是太复杂，在软件管家里面也可以直接安装。" class="headerlink" title="这个就在官网下载就行了，安装过程也不是太复杂，在软件管家里面也可以直接安装。"></a>这个就在<strong>官网</strong>下载就行了，安装过程也不是太复杂，在<strong>软件管家</strong>里面也可以直接安装。</h2><h3 id="Ⅱ-安装完成之后，就是来配置自己的个人Git仓库"><a href="#Ⅱ-安装完成之后，就是来配置自己的个人Git仓库" class="headerlink" title="Ⅱ.安装完成之后，就是来配置自己的个人Git仓库"></a>Ⅱ.安装完成之后，就是来配置自己的个人Git仓库</h3><hr>
+<h2 id="首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git-Bash-Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。"><a href="#首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git-Bash-Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。" class="headerlink" title="首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的Git Bash Here，然后就会弹出个黑框框，在里面写git语句就可以实现操作。"></a>首先，在桌面上新建一个文件夹，然后右击弹出窗口，我是选择的<em>Git Bash Here</em>，然后就会弹出个黑框框，在里面写git语句就可以实现操作。</h2><p>❶.新建文件夹来作为你的本地仓库。可以直接用Windows创建，同样可以选择使用操作语句。<br>以我的为例，在’美元‘符号后写入：<code>mkdir DBHelper</code> 就新建了一个文件。然后就进入这个文件夹中操作即可。</p>
+<hr>
+<p>❷.进行基础配置：绑定用户，邮箱 相应的语句：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name “github’s Name”</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"github@xx.com"</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>❸.通过命令<code>git init</code>把这个文件夹变成Git可管理的仓库。这时你会发现DBHelper里面多了个.git文件夹，它是Git用来<em>跟踪和管理版本库</em>的。<br>如果你看不到，是因为它默认是隐藏文件，那你就需要设置一下让隐藏文件可见。（不会找度娘，操作挺简单）</p>
+<hr>
+<p>❹创建，上传文件到本地仓库。这时候你就可以把你的项目粘贴到这个本地Git仓库里面（粘贴后你可以通过<code>git status</code>来查看你当前的状态）.<br>然后通过<code>git add</code>把项目添加到仓库（或<code>git add .</code>把该目录下的所有文件添加到仓库，注意点是用空格隔开的）。<br>在这个过程中你其实可以一直使用<code>git status</code>来查看你当前的状态。要注意的是add过程是将文件传到暂存区。<br>最后，用<code>git commit</code>把项目提交到仓库。-m后面引号里面是本次提交的注释内容，这个可以不写，但最好写上，不然会报错，详情自行找度娘。<br>好了，我们本地Git仓库这边的工作做完了，下面就到了连接远程仓库（也就是连接Github）。</p>
+<hr>
+<p>❺.连接远程仓库：这个操作过程就借鉴了廖雪峰的官方网站，感觉照着操作还是比较简单：<br> ①.创建SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建:<br>    <code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br> ②.进入Github的主页面，找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。<br> ③.创建与远程仓库的关联：命令行：<br>    <code>$ git remote add origin “远程仓库地址”</code></p>
+<hr>
+<h2 id="❻-上传文件：使用命令git-push-origin-master等待一段时间，就可以上传，刷新一下GitHub页面，哇！神奇的神奇就发生了，代码就成功的上传！！"><a href="#❻-上传文件：使用命令git-push-origin-master等待一段时间，就可以上传，刷新一下GitHub页面，哇！神奇的神奇就发生了，代码就成功的上传！！" class="headerlink" title="❻.上传文件：使用命令git push origin master等待一段时间，就可以上传，刷新一下GitHub页面，哇！神奇的神奇就发生了，代码就成功的上传！！    "></a>❻.上传文件：使用命令<code>git push origin master</code>等待一段时间，就可以上传，刷新一下GitHub页面，哇！神奇的神奇就发生了，代码就成功的上传！！    </h2><h3 id="Ⅲ-注意事项："><a href="#Ⅲ-注意事项：" class="headerlink" title="Ⅲ.注意事项："></a>Ⅲ.注意事项：</h3><hr>
+<p>在最后上传的时候，Git可能会报错：<code>failed to push some refs to ‘’远程仓库‘</code>，原因就是你的仓库可能已经创建了一个READERME.md文件，或者仓库里面已经不为空。<br>这个时候就要使用命令行：<code>git pull --rebase origin master</code> 将内容合并，再push 一下就可以了。</p>
+<hr>
+<h3 id="Ⅳ-总结："><a href="#Ⅳ-总结：" class="headerlink" title="Ⅳ.总结："></a>Ⅳ.总结：</h3><hr>
+<h2 id="利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。"><a href="#利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。" class="headerlink" title="利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。"></a>利用Git创建了本地仓库与远程仓库的连接，非常利于我们上传代码文件到GitHub上，在配置的过程中，感觉还是要输入学习一下git的命令语句，并且，之后的目标就是在GitHub上搭建一个自己的网站。</h2><h3 id="Ⅴ-最后将一些学习资源的网址列在下边："><a href="#Ⅴ-最后将一些学习资源的网址列在下边：" class="headerlink" title="Ⅴ.最后将一些学习资源的网址列在下边："></a>Ⅴ.最后将一些学习资源的网址列在下边：</h3><p>廖雪峰的官方网站：<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416</a><br>B站教程：<a href="https://www.bilibili.com/video/av10475153/?p=8&amp;t=825" target="_blank" rel="noopener">https://www.bilibili.com/video/av10475153/?p=8&amp;t=825</a></p>
+<hr>
+<!--more-->
 
       
 
