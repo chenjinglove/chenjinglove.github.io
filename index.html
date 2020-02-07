@@ -318,6 +318,192 @@
 
 
   
+    <article id="post-Linux学习-组管理和权限管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/05/Linux%E5%AD%A6%E4%B9%A0-%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">Linux学习---组管理和权限管理</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/05/Linux%E5%AD%A6%E4%B9%A0-%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" class="archive-article-date">
+  	<time datetime="2020-02-05T08:41:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="组管理和权限管理"><a href="#组管理和权限管理" class="headerlink" title="组管理和权限管理"></a>组管理和权限管理</h1><h2 id="1-Linux组基本介绍"><a href="#1-Linux组基本介绍" class="headerlink" title="1. Linux组基本介绍"></a>1. Linux组基本介绍</h2><ul>
+<li>Linux中每个用户属于一个组，不能独立于组以外。所以在Linux中每个文件存在组的概念：<ol>
+<li>所有者</li>
+<li>所在组</li>
+<li>其他组</li>
+<li>改变用户所在组</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-文件-目录所有者"><a href="#2-文件-目录所有者" class="headerlink" title="2. 文件/目录所有者"></a>2. 文件/目录所有者</h2><blockquote>
+<p>一般为文件的创建者，谁创建了该文件，就自然的称为该文件的所有者。</p>
+</blockquote>
+<ul>
+<li>查看文件所有者：ls -ahl</li>
+<li>修改文件所有者：chown (用户名) (文件名)</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/02/05/Linux%E5%AD%A6%E4%B9%A0-%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/05/Linux%E5%AD%A6%E4%B9%A0-%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Linux学习-实用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/04/Linux%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/">Linux学习---实用指令</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/04/Linux%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-02-04T13:36:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="实用指令"><a href="#实用指令" class="headerlink" title="实用指令"></a>实用指令</h1><h2 id="1-指定运行级别（7个级别）"><a href="#1-指定运行级别（7个级别）" class="headerlink" title="1. 指定运行级别（7个级别）"></a>1. 指定运行级别（7个级别）</h2><ul>
+<li><p>0.关机</p>
+</li>
+<li><p>1.单用户【找回丢失密码】</p>
+</li>
+<li><p>2.多用户状态没有网络服务</p>
+</li>
+<li><p>3.多用户状态有网络服务</p>
+</li>
+<li><p>4.系统未使用保留给用户</p>
+</li>
+<li><p>5.图形界面</p>
+</li>
+<li><p>6.系统重启</p>
+</li>
+<li><p>系统的运行级别配置文件：/etc/inittab<br><img src="/assets/imgs/3/3.5%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB%E6%8C%87%E4%BB%A4.jpg" alt="3.5运行级别指令.jpg"></p>
+</li>
+<li><p>切换到指定运行级别的指令：init [012356]</p>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/02/04/Linux%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/04/Linux%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-用户管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -819,163 +1005,6 @@
 
 
   
-    <article id="post-2019-1-16-照片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/16/2019-1-16-%E7%85%A7%E7%89%87/">2020/1/16 照片</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/16/2019-1-16-%E7%85%A7%E7%89%87/" class="archive-article-date">
-  	<time datetime="2020-01-16T05:52:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>从成都回来几天了，今天去姐家看看外甥，拍了几张照片。</p>
-<hr>
-<p><img src="/assets/blogImg/%E5%A4%96%E7%94%A5A8.jpg" alt="avatar"></p>
-        
-          <a class="article-more-a" href="/2020/01/16/2019-1-16-%E7%85%A7%E7%89%87/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-相册-家人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/16/2019-1-16-%E7%85%A7%E7%89%87/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MD5加密" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/21/MD5%E5%8A%A0%E5%AF%86/">MD5加密</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/21/MD5%E5%8A%A0%E5%AF%86/" class="archive-article-date">
-  	<time datetime="2019-12-21T00:12:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>MD5在我们编程中是很常用的，之前在学习Web开发的时候，将用户的密码保存到数据库时，就要进行一次甚至多次MD5加密。现在的网络上也提供MD5加密的工具和在线加密。</p>
-<p><img src="/assets/blogImg/MD5%E5%8A%A0%E5%AF%86.jpg" alt="avatar"></p>
-<hr>
-<h4 id="一-了解MD5"><a href="#一-了解MD5" class="headerlink" title="一.了解MD5"></a>一.了解MD5</h4><p>MD5即<strong>Message-Digest Algorithm 5(信息-摘要算法5)</strong>，用于确保信息传输完整一致。是计算机广泛使用的杂凑算法之一(又译摘要算法、哈希算法)，主流编程语言普遍已有MD5实现。将数据(如汉字)运算为另一固定长度值，是杂凑算法的基础原理，MD5的前身有MD2、MD3和MD4。</p>
-        
-          <a class="article-more-a" href="/2019/12/21/MD5%E5%8A%A0%E5%AF%86/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-C#学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/21/MD5%E5%8A%A0%E5%AF%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1085,15 +1114,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">-实用工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-教程</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">-实用工具</a>
               </li>
             
             <div class="clearfix"></div>
