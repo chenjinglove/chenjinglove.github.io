@@ -6,23 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xuguo.top">
-  <title>Linux学习---用户管理 | Xu &amp; Blog</title>
+  <title>模具全周期管理 | Xu &amp; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用户管理1. 基本用户管理  Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。 用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。 每个用户账号都拥有一个唯一的用户名和各自的口令。 要完成的工作主要有如下几个方">
+  <meta name="description" content="前言： 国际上普遍认为，设备管理是指全寿命周期的管理，因此也叫LCM, （Life Circle Management）。全寿命周期的管理有三重含义，一是在三维空间上的全寿命周期管理；二是突出在浴盆曲线不同阶段的不同管理特色；三是全寿命周期的费用管理。广义全寿命周期管理始于设备的规划，终于设备的淘汰，包含设备的可行性研究、选型决策、购置合同管理、安装调试、初期管理、设备运行、清扫、点检、保养（包含">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux学习---用户管理">
-<meta property="og:url" content="http://xuguo.top/2020/02/03/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:title" content="模具全周期管理">
+<meta property="og:url" content="http://xuguo.top/2020/02/10/%E6%A8%A1%E5%85%B7%E5%85%A8%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="Xu &amp; Blog">
-<meta property="og:description" content="用户管理1. 基本用户管理  Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。 用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。 每个用户账号都拥有一个唯一的用户名和各自的口令。 要完成的工作主要有如下几个方">
-<meta property="og:image" content="http://xuguo.top/assets/imgs/3/3.4etcpasswd%E6%96%87%E4%BB%B6.jpg">
-<meta property="og:image" content="http://xuguo.top/assets/imgs/3/3.4etcshadow.jpg">
-<meta property="og:image" content="http://xuguo.top/assets/imgs/3/3.4etcgroup.jpg">
-<meta property="article:published_time" content="2020-02-03T12:11:39.000Z">
-<meta property="article:modified_time" content="2020-02-07T08:21:38.962Z">
+<meta property="og:description" content="前言： 国际上普遍认为，设备管理是指全寿命周期的管理，因此也叫LCM, （Life Circle Management）。全寿命周期的管理有三重含义，一是在三维空间上的全寿命周期管理；二是突出在浴盆曲线不同阶段的不同管理特色；三是全寿命周期的费用管理。广义全寿命周期管理始于设备的规划，终于设备的淘汰，包含设备的可行性研究、选型决策、购置合同管理、安装调试、初期管理、设备运行、清扫、点检、保养（包含">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E5%B7%A5%E5%A4%B9%E5%85%B72.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.7%E6%A8%A1%E5%85%B7%E5%AF%BF%E5%91%BD.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B01.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10ar.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10exeal.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E6%A8%A1%E5%85%B7%E6%A0%87%E7%AD%BE.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B03.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B04.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B05.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E6%A8%A1%E5%85%B7%E6%9D%A1%E7%A0%81.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.10%E4%BA%91%E5%B9%B3%E5%8F%B0.jpg">
+<meta property="article:published_time" content="2020-02-10T02:45:27.000Z">
+<meta property="article:modified_time" content="2020-02-10T04:06:00.399Z">
 <meta property="article:author" content="许郭">
-<meta property="article:tag" content="-Linux">
+<meta property="article:tag" content="-随笔">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://xuguo.top/assets/imgs/3/3.4etcpasswd%E6%96%87%E4%BB%B6.jpg">
+<meta name="twitter:image" content="http://xuguo.top/assets/blogImg/20.2.10%E5%B7%A5%E5%A4%B9%E5%85%B72.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Xu &amp; Blog" type="application/atom+xml">
   
@@ -162,284 +172,122 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-用户管理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-模具全周期管理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux学习---用户管理
+      模具全周期管理
     </h1>
   
 
         
-        <a href="/2020/02/03/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-02-03T12:11:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-03</time>
+        <a href="/2020/02/10/%E6%A8%A1%E5%85%B7%E5%85%A8%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/" class="archive-article-date">
+  	<time datetime="2020-02-10T02:45:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h1><h2 id="1-基本用户管理"><a href="#1-基本用户管理" class="headerlink" title="1. 基本用户管理"></a>1. 基本用户管理</h2><blockquote>
-<ul>
-<li>Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。</li>
-<li>用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。</li>
-<li>每个用户账号都拥有一个唯一的用户名和各自的口令。</li>
-<li>要完成的工作主要有如下几个方面：<ul>
-<li>用户账号的添加、删除与修改。</li>
-<li>用户口令的管理。</li>
-<li>用户组的管理。</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-
-<h3 id="1-1-添加用户"><a href="#1-1-添加用户" class="headerlink" title="1.1 添加用户"></a>1.1 添加用户</h3><blockquote>
-<p>添加用户：useradd [选项] 用户名。</p>
-</blockquote>
-<h4 id="1-1-1-参数说明"><a href="#1-1-1-参数说明" class="headerlink" title="1.1.1 参数说明"></a>1.1.1 参数说明</h4><ul>
-<li><p>选项:</p>
-<ul>
-<li>-c comment 指定一段注释性描述。</li>
-<li>-d 目录 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录。</li>
-<li>-g 用户组 指定用户所属的用户组。</li>
-<li>-G 用户组，用户组 指定用户所属的附加组。</li>
-<li>-s Shell文件 指定用户的登录Shell。</li>
-<li>-u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。</li>
-<li>-f [缓冲天数] 指定在密码过期后多少天即关闭该帐号。</li>
-<li>-e 有效期限 指定帐号的有效期限；</li>
-<li>-M：不要自动建立用户的登入目录；</li>
-</ul>
-</li>
-<li><p>用户名:</p>
-<ul>
-<li>指定新账号的登录名。</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-1-2-实例"><a href="#1-1-2-实例" class="headerlink" title="1.1.2 实例"></a>1.1.2 实例</h4><ol>
-<li>useradd –d  /home/sam -m sam<ul>
-<li>此命令创建了一个用户sam，其中-d和-m选项用来为登录名sam产生一个主目录 /home/sam（/home为默认的用户主目录所在的父目录）。</li>
-</ul>
-</li>
-<li>useradd -s /bin/sh -g group –G adm,root gem<ul>
-<li>新建了一个用户gem，该用户的登录Shell是 /bin/sh，它属于group用户组，同时又属于adm和root用户组，其中group用户组是其主组。</li>
-</ul>
-</li>
+        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p><img src="/assets/blogImg/20.2.10%E5%B7%A5%E5%A4%B9%E5%85%B72.jpg" alt="avatar"></p>
+<p>国际上普遍认为，设备管理是指全寿命周期的管理，因此也叫LCM, （Life Circle Management）。全寿命周期的管理有三重含义，一是在三维空间上的全寿命周期管理；二是突出在浴盆曲线不同阶段的不同管理特色；三是全寿命周期的费用管理。广义全寿命周期管理始于设备的规划，终于设备的淘汰，包含设备的可行性研究、选型决策、购置合同管理、安装调试、初期管理、设备运行、清扫、点检、保养（包含润滑、紧固、调整、对中、平衡、堵漏、防腐等细节）、修理、技术改造、淘汰以及备品备件管理等内容。</p>
+<p><img src="/assets/blogImg/20.2.7%E6%A8%A1%E5%85%B7%E5%AF%BF%E5%91%BD.jpg" alt="avatar"></p>
+<hr>
+<h2 id="一-特点与相关模块"><a href="#一-特点与相关模块" class="headerlink" title="一.特点与相关模块"></a>一.特点与相关模块</h2><h3 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h3><ol>
+<li>模具档案集中管理</li>
+<li>模具领还统一控制</li>
+<li>模具寿命自动累计</li>
+<li>模具位置标识归位</li>
+<li>模具保养自动提醒</li>
 </ol>
-<h3 id="1-2-用户口令的管理"><a href="#1-2-用户口令的管理" class="headerlink" title="1.2 用户口令的管理"></a>1.2 用户口令的管理</h3><blockquote>
-<p>指定和修改用户口令: passwd 选项 用户名</p>
-</blockquote>
-<h4 id="1-2-1-参数说明"><a href="#1-2-1-参数说明" class="headerlink" title="1.2.1 参数说明"></a>1.2.1 参数说明</h4><ul>
-<li>选项：<ul>
-<li>-l 锁定口令，即禁用账号。</li>
-<li>-u 口令解锁。</li>
-<li>-d 使账号无口令。</li>
-<li>-f 强迫用户下次登录时修改口令。</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-2-2-注意事项"><a href="#1-2-2-注意事项" class="headerlink" title="1.2.2 注意事项"></a>1.2.2 注意事项</h4><ul>
-<li>如果默认用户名，则修改当前用户的口令。<ul>
-<li>假设当前用户是sam，则下面的命令修改该用户自己的口令：passwd sam</li>
-</ul>
-</li>
-<li>普通用户修改自己的口令时，passwd命令会先询问原口令，验证后再要求用户输入两遍新口令，如果两次输入的口令一致，则将这个口令指定给用户；</li>
-<li>超级用户为用户指定口令时，就不需要知道原口令。</li>
-</ul>
-<h4 id="1-2-3-案例"><a href="#1-2-3-案例" class="headerlink" title="1.2.3 案例"></a>1.2.3 案例</h4><ol>
-<li>passwd -l sam<ul>
-<li>用 -l(lock) 选项锁定某一用户，使其不能登录</li>
-</ul>
-</li>
-<li>passwd -d sam<ul>
-<li>为用户指定空口令</li>
-</ul>
-</li>
+<h3 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h3><ol>
+<li><strong>系统基础资料管理</strong>：提供如料号、部门、人员、客户、供应商等系统基础资料的维护与查询</li>
+<li><strong>系统权限管理</strong>：提供基于用户层面的权限管理</li>
+<li><strong>模具资产管理</strong>：负责模具资产的各类信息的建档、归类、查询、分析等功能</li>
+<li><strong>模具生产管理</strong>：管理模具在生产过程中的领用、移交、归还等业务</li>
+<li><strong>模具维修管理</strong>：管理模具在日常工作中模具因损坏或定期大保而产生的模具领用、移交及归还等业务</li>
+<li><strong>模具保养管理</strong>：管理模具在日常工作中的保养业务，提供提醒功能，以防作业人员遗漏</li>
 </ol>
-<h3 id="1-3-删除帐号"><a href="#1-3-删除帐号" class="headerlink" title="1.3 删除帐号"></a>1.3 删除帐号</h3><blockquote>
-<p>删除帐号: userdel 选项 用户名</p>
-</blockquote>
-<h4 id="1-3-1-注意事项"><a href="#1-3-1-注意事项" class="headerlink" title="1.3.1 注意事项"></a>1.3.1 注意事项</h4><ul>
-<li>常用的选项是 -r，它的作用是把用户的主目录一起删除。<ul>
-<li>userdel -r sam</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-4-修改帐号"><a href="#1-4-修改帐号" class="headerlink" title="1.4 修改帐号"></a>1.4 修改帐号</h3><blockquote>
-<p>修改已有用户的信息: usermod 选项 用户名</p>
-</blockquote>
-<h4 id="1-4-1-注意事项"><a href="#1-4-1-注意事项" class="headerlink" title="1.4.1 注意事项"></a>1.4.1 注意事项</h4><ul>
-<li>常用的选项包括-c, -d, -m, -g, -G, -s, -u以及-o等，这些选项的意义与useradd命令中的选项一样，可以为用户指定新的资源值。</li>
-</ul>
-<h3 id="1-5-查询用户信息"><a href="#1-5-查询用户信息" class="headerlink" title="1.5 查询用户信息"></a>1.5 查询用户信息</h3><ul>
-<li>查询用户信息: id 用户名<ul>
-<li>用户不存在是返回“无此用户”</li>
-</ul>
-</li>
-<li>查看当前用户/登录用户：who am i</li>
-</ul>
-<h3 id="1-6-切换用户"><a href="#1-6-切换用户" class="headerlink" title="1.6 切换用户"></a>1.6 切换用户</h3><ul>
-<li>切换用户：su - 切换用户名<ul>
-<li>从权限高切换到权限低的用户不需要输密码。</li>
-<li>返回切换前的用户：exit</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-用户组的管理"><a href="#2-用户组的管理" class="headerlink" title="2. 用户组的管理"></a>2. 用户组的管理</h2><blockquote>
-<p>每个用户都有一个用户组，系统可以对一个用户组中的所有用户进行集中管理。不同Linux 系统对用户组的规定有所不同，如Linux下的用户属于与它同名的用户组，这个用户组在创建用户时同时创建。<br>用户组的管理涉及用户组的添加、删除和修改。组的增加、删除和修改实际上就是对/etc/group文件的更新。</p>
-</blockquote>
-<h3 id="2-1-增加一个新的用户组"><a href="#2-1-增加一个新的用户组" class="headerlink" title="2.1 增加一个新的用户组"></a>2.1 增加一个新的用户组</h3><blockquote>
-<p>增加一个新的用户组: groupadd 选项 用户组</p>
-</blockquote>
-<h4 id="2-1-1-说明"><a href="#2-1-1-说明" class="headerlink" title="2.1.1 说明"></a>2.1.1 说明</h4><ul>
-<li>选项有：<ul>
-<li>-g GID 指定新用户组的组标识号（GID）。</li>
-<li>-o 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同。</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-1-2-案例"><a href="#2-1-2-案例" class="headerlink" title="2.1.2 案例"></a>2.1.2 案例</h4><ol>
-<li>groupadd -g 101 group2<ul>
-<li>向系统中增加了一个新组group1，新组的组标识号是在当前已有的最大组标识号的基础上加1。</li>
-</ul>
-</li>
-<li>groupadd -g 101 group2<ul>
-<li>向系统中增加了一个新组group2，同时指定新组的组标识号是101。</li>
-</ul>
-</li>
-</ol>
-<h3 id="2-2-删除用户组"><a href="#2-2-删除用户组" class="headerlink" title="2.2 删除用户组"></a>2.2 删除用户组</h3><blockquote>
-<p>删除用户组: groupmod 选项 用户组</p>
-</blockquote>
-<h4 id="2-1-2-说明"><a href="#2-1-2-说明" class="headerlink" title="2.1.2 说明"></a>2.1.2 说明</h4><ul>
-<li>选项有：<ul>
-<li>-g GID 为用户组指定新的组标识号。</li>
-<li>-o 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。</li>
-<li>-n新用户组 将用户组的名字改为新名字</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-1-3-案例"><a href="#2-1-3-案例" class="headerlink" title="2.1.3 案例"></a>2.1.3 案例</h4><ol>
-<li>groupmod -g 102 group2<ul>
-<li>将组group2的组标识号修改为102。</li>
-</ul>
-</li>
-<li>groupmod –g 10000 -n group3 group2<ul>
-<li>将组group2的标识号改为10000，组名修改为group3。</li>
-</ul>
-</li>
-</ol>
-<h3 id="2-3-组的切换"><a href="#2-3-组的切换" class="headerlink" title="2.3 组的切换"></a>2.3 组的切换</h3><blockquote>
-<p>用户可以在登录后，使用命令newgrp切换到其他用户组，这个命令的参数就是目的用户组。例如：</p>
+<hr>
+<h2 id="二-主要功能"><a href="#二-主要功能" class="headerlink" title="二.主要功能"></a>二.主要功能</h2><p><strong>高效，灵活的跨平台服务</strong></p>
+<p><img src="/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B01.jpg" alt="avatar"></p>
 <ul>
-<li>$ newgrp root<ul>
-<li>这条命令将当前用户切换到root用户组，前提条件是root用户组确实是该用户的主组或附加组。类似于用户账号的管理，用户组的管理也可以通过集成的系统管理工具来完成。</li>
-</ul>
+<li><p>故障记录，支持通过文字、拍照、录像、语音等方式记录现场故障信息。</p>
+</li>
+<li><p>故障隔离，支持以人机交互的方式进行故障隔离，并记录维修信息。</p>
+</li>
+<li><p>虚拟维修，支持AR（增强现实）/VR（虚拟现实）技术进行现场虚拟辅助维修。</p>
+<p><img src="/assets/blogImg/20.2.10ar.jpg" alt="avatar"></p>
+</li>
+<li><p>数据传输，支持云服务、有线和无线的方式在客户端和服务器间传输数据。</p>
+<p><img src="/assets/blogImg/20.2.10%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg" alt="avatar"></p>
 </li>
 </ul>
-</blockquote>
-<h2 id="3-与用户账号有关的系统文件"><a href="#3-与用户账号有关的系统文件" class="headerlink" title="3. 与用户账号有关的系统文件"></a>3. 与用户账号有关的系统文件</h2><h3 id="3-1-etc-passwd-文件"><a href="#3-1-etc-passwd-文件" class="headerlink" title="3.1 /etc/passwd 文件"></a>3.1 /etc/passwd 文件</h3><blockquote>
-<p>用户（user）的配置文件，记录用户的各种信息。</p>
-</blockquote>
+<hr>
+<p><strong>人、机、物协同，一元化的资产管理</strong></p>
 <ul>
-<li><p>每行的含义：</p>
-<ol>
-<li><p>“用户名”是代表用户账号的字符串。</p>
+<li><p>数据快速导入，支持以excel格式导入/导出数据，也可以与ERP/PLM系统对接，导入BOM数据等。</p>
 <ul>
-<li>通常长度不超过8个字符，并且由大小写字母和/或数字组成。登录名中不能有冒号(:)，因为冒号在这里是分隔符。</li>
-<li>为了兼容起见，登录名中最好不要包含点字符(.)，并且不使用连字符(-)和加号(+)打头。</li>
+<li><img src="/assets/blogImg/20.2.10exeal.jpg" alt="avatar"></li>
 </ul>
+<hr>
 </li>
-<li><p>“口令”一些系统中，存放着加密后的用户口令字。</p>
+</ul>
 <ul>
-<li>虽然这个字段存放的只是用户口令的加密串，不是明文，但是由于/etc/passwd文件对所有用户都可读，所以这仍是一个安全隐患。因此，现在许多Linux 系统（如SVR4）都使用了shadow技术，把真正的加密后的用户口令字存放到/etc/shadow文件中，而在/etc/passwd文件的口令字段中只存放一个特殊的字符，例如“x”或者“*”。</li>
-</ul>
+<li><p>数据结构调整，支持以拖拽方式调整数据层级结构，支持自定义数据属性信息（文本、数字、图片、文档和日期）。</p>
 </li>
-<li><p>“用户标识号”是一个整数，系统内部用它来标识用户。</p>
+<li><p>物联网自动采集，支持工业传感器采集的数据与资产属性关联。</p>
+<p><img src="/assets/blogImg/20.2.10%E6%A8%A1%E5%85%B7%E6%A0%87%E7%AD%BE.jpg" alt="avatar"></p>
+</li>
+</ul>
+<hr>
+<p><strong>多维度、可视化的大数据分析</strong></p>
+<p><img src="/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B03.jpg" alt="avatar"></p>
 <ul>
-<li>一般情况下它与用户名是一一对应的。如果几个用户名对应的用户标识号是一样的，系统内部将把它们视为同一个用户，但是它们可以有不同的口令、不同的主目录以及不同的登录Shell等。</li>
-<li>通常用户标识号的取值范围是0～65 535。0是超级用户root的标识号，1～99由系统保留，作为管理账号，普通用户的标识号从100开始。在Linux系统中，这个界限是500。</li>
+<li>运维KPI全局可视: 不同维度的数据分析及展示，支持项目、任务、设备资产、设备系统等不同维度的故障、任务等的执行状况分析以及成本分析、任务分析、人工效率分析、 MTBF分析、 MTTR分析等。</li>
+<li>自定义报表，支持以拖拽形式自定义的报表制作和组合。</li>
+<li>数据分析及AI：设备性能、健康度趋势的智能预测，根据运维逻辑实现关联分析，可自动提供众多维度的性能指标，有效缩短事件调查时间，从而减少MTTR。</li>
 </ul>
-</li>
-<li><p>“组标识号”字段记录的是用户所属的用户组。</p>
+<hr>
+<p><strong>方便灵活、集成化的模件管理</strong></p>
+<p><img src="/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B04.jpg" alt="avatar"></p>
 <ul>
-<li>它对应着/etc/group文件中的一条记录。</li>
-</ul>
+<li><p>批量导入/导出，支持以excel格式批量导入/导出备件。</p>
+<p><img src="/assets/blogImg/20.2.10%E5%B9%B3%E5%8F%B05.jpg" alt="avatar"></p>
 </li>
-<li><p>“注释性描述”字段记录着用户的一些个人情况。</p>
+<li><p>库存优化管理，支持备件库存数超出阈值自动报警，支持与ERP库存系统集成。</p>
+</li>
+<li><p>配置管理，支持自定义备件分类管理；支持扫描设备识别备件二维码；支持备件与维修任务相以及设备资产相互关联。</p>
+</li>
+<li><p>备件日志，支持查看备件历史使用记录。</p>
+</li>
+</ul>
+<hr>
+<h2 id="三-扩展功能"><a href="#三-扩展功能" class="headerlink" title="三.扩展功能"></a>三.扩展功能</h2><p><strong>模具配件管理</strong></p>
 <ul>
-<li>例如用户的真实姓名、电话、地址等，这个字段并没有什么实际的用途。在不同的Linux 系统中，这个字段的格式并没有统一。在许多Linux系统中，这个字段存放的是一段任意的注释性描述文字，用做finger命令的输出。</li>
-</ul>
+<li><p>模具有很多易损件和配件，模具部也有独立的仓库，而传统的ERP系统一般很少将它纳入进管理，因此我们的系统就是ERP系统的一补充，可以管理模具配件的库存、出库数量、入库数量，库存流水帐清清楚楚。</p>
+<p><strong>新模申请及采购管理</strong></p>
 </li>
-<li><p>“主目录”，也就是用户的起始工作目录。</p>
+<li><p>新模具从申请到采购，最后入库，这个流程可以直接在系统中进行管理，系统中有对应的模具申请单、模具采购单和模具入库单，这些单据可以直接生成对应的报表打印出来，同时，这些单据支持自定义签核流程。</p>
+</li>
+</ul>
+<p><strong>条码管理</strong></p>
 <ul>
-<li>它是用户在登录到系统之后所处的目录。在大多数系统中，各用户的主目录都被组织在同一个特定的目录下，而用户主目录的名称就是该用户的登录名。各用户对自己的主目录有读、写、执行（搜索）权限，其他用户对此目录的访问权限则根据具体情况设置。</li>
-</ul>
+<li><p>模具出入库，除了使用电脑直接在系统中录入之外，也可以用扫描条码的方式，使用条码枪，而扫描条码，进行出入库操作。</p>
+<p><img src="/assets/blogImg/20.2.10%E6%A8%A1%E5%85%B7%E6%9D%A1%E7%A0%81.jpg" alt="avatar"></p>
 </li>
-<li><p>用户登录后，要启动一个进程，负责将用户的操作传给内核，这个进程是用户登录到系统后运行的命令解释器或某个特定的程序，即Shell。</p>
+</ul>
+<p><strong>模具二维码</strong></p>
 <ul>
-<li>Shell是用户与Linux系统之间的接口。Linux的Shell有许多种，每种都有不同的特点。常用的有sh(Bourne Shell), csh(C Shell), ksh(Korn Shell), tcsh(TENEX/TOPS-20 type C Shell), bash(Bourne Again Shell)等。</li>
-<li>系统管理员可以根据系统情况和用户习惯为用户指定某个Shell。如果不指定Shell，那么系统使用sh为默认的登录Shell，即这个字段的值为/bin/sh。<ul>
-<li>用户的登录Shell也可以指定为某个特定的程序（此程序不是一个命令解释器）。</li>
-</ul>
-</li>
-<li>利用这一特点，我们可以限制用户只能运行指定的应用程序，在该应用程序运行结束后，用户就自动退出了系统。有些Linux 系统要求只有那些在系统中登记了的程序才能出现在这个字段中。</li>
-</ul>
-</li>
-<li><p>系统中有一类用户称为伪用户（pseudo users）。</p>
-<ul>
-<li><p>这些用户在/etc/passwd文件中也占有一条记录，但是不能登录，因为它们的登录Shell为空。它们的存在主要是方便系统管理，满足相应的系统进程对文件属主的要求。</p>
-<p><img src="/assets/imgs/3/3.4etcpasswd%E6%96%87%E4%BB%B6.jpg" alt="3.4etcpasswd文件.jpg"></p>
+<li><p>可以直接从系统中生成模具的二维码，然后制作成铭牌，安装在模具上面，再通过手机、PDA、手持机扫描二维码，对模具进行出入库、位置转移等进行记录。</p>
+<p><img src="/assets/blogImg/20.2.10%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="avatar"></p>
+<p><img src="/assets/blogImg/20.2.10%E4%BA%91%E5%B9%B3%E5%8F%B0.jpg" alt="avatar"></p>
 </li>
 </ul>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="3-2-etc-shadow-文件"><a href="#3-2-etc-shadow-文件" class="headerlink" title="3.2 /etc/shadow 文件"></a>3.2 /etc/shadow 文件</h3><blockquote>
-<p>口令配置文件</p>
-</blockquote>
-<ul>
-<li><p>每行的含义：</p>
-<ol>
-<li><p>“登录名”是与/etc/passwd文件中的登录名相一致的用户账号</p>
-</li>
-<li><p>“口令”字段存放的是加密后的用户口令字，长度为13个字符。如果为空，则对应用户没有口令，登录时不需要口令；如果含有不属于集合 { ./0-9A-Za-z }中的字符，则对应的用户不能登录。</p>
-</li>
-<li><p>“最后一次修改时间”表示的是从某个时刻起，到用户最后一次修改口令时的天数。时间起点对不同的系统可能不一样。例如在SCO Linux 中，这个时间起点是1970年1月1日。</p>
-</li>
-<li><p>“最小时间间隔”指的是两次修改口令之间所需的最小天数。</p>
-</li>
-<li><p>“最大时间间隔”指的是口令保持有效的最大天数。</p>
-</li>
-<li><p>“警告时间”字段表示的是从系统开始警告用户到用户密码正式失效之间的天数。</p>
-</li>
-<li><p>“不活动时间”表示的是用户没有登录活动但账号仍能保持有效的最大天数。</p>
-</li>
-<li><p>“失效时间”字段给出的是一个绝对的天数，如果使用了这个字段，那么就给出相应账号的生存期。期满后，该账号就不再是一个合法的账号，也就不能再用来登录了。</p>
-<p>   <img src="/assets/imgs/3/3.4etcshadow.jpg" alt="3.4etcshadow.jpg"></p>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="3-3-etc-group-文件"><a href="#3-3-etc-group-文件" class="headerlink" title="3.3 /etc/group 文件"></a>3.3 /etc/group 文件</h3><blockquote>
-<p>组（group）的配置文件，用户组的所有信息都存放在/etc/group文件中。</p>
-</blockquote>
-<ul>
-<li><p>每行含义：</p>
-<ol>
-<li>“组名”是用户组的名称，由字母或数字构成。与/etc/passwd中的登录名一样，组名不应重复。</li>
-<li>“口令”字段存放的是用户组加密后的口令字。一般Linux 系统的用户组都没有口令，即这个字段一般为空，或者是*。</li>
-<li>“组标识号”与用户标识号类似，也是一个整数，被系统内部用来标识组。</li>
-<li>“组内用户列表”是属于这个组的所有用户的列表/b]，不同用户之间用逗号(,)分隔。这个用户组可能是用户的主组，也可能是附加组。</li>
-</ol>
-<p><img src="/assets/imgs/3/3.4etcgroup.jpg" alt="3.4etcgroup.jpg"></p>
-</li>
-</ul>
+<hr>
 
       
 
@@ -484,7 +332,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-随笔</a>
         		</li>
       		
 		</ul>
@@ -540,7 +388,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://xuguo.top/2020/02/03/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://xuguo.top/2020/02/10/%E6%A8%A1%E5%85%B7%E5%85%A8%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -554,18 +402,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/04/Linux%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux学习---实用指令
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/03/%E5%85%B3%E6%9C%BA%E3%80%81%E9%87%8D%E5%90%AF%E5%92%8C%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux学习---关机、重启和用户登录注销</div>
+    <a href="/2020/02/07/%E5%B7%A5%E5%A4%B9%E5%85%B7%E7%B3%BB%E7%BB%9F%E6%BC%94%E7%A4%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">工夹具系统演示</div>
       <i class="icon-circle-right"></i>
     </a>
   
