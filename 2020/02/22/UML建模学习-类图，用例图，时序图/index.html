@@ -6,24 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xuguo.top">
-  <title>Xu &amp; Blog</title>
+  <title>UML建模学习---类图，用例图，时序图 | Xu &amp; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="某石油大学软件工程在读大学生，Java后端学习者，前端不太涉足，此博客用来记录学习与生活。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xu &amp; Blog">
-<meta property="og:url" content="http://xuguo.top/page/3/index.html">
+  <meta name="description" content="UML 介绍：1997年，OMG 组织（Object Management Group对象管理组织）发布了统一建模语言（Unified Modeling Language，UML）。UML 是一种编制软蓝图的标准化语言，它的目标之一就是为开发团队提供标准通用的设计语言来开发和构建计算机应用。UML 提出了一套 IT 专业人员期待多年的统一的标准建模符号。通过使用UML，这些人员能够阅读和交流系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UML建模学习---类图，用例图，时序图">
+<meta property="og:url" content="http://xuguo.top/2020/02/22/UML%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0-%E7%B1%BB%E5%9B%BE%EF%BC%8C%E7%94%A8%E4%BE%8B%E5%9B%BE%EF%BC%8C%E6%97%B6%E5%BA%8F%E5%9B%BE/index.html">
 <meta property="og:site_name" content="Xu &amp; Blog">
-<meta property="og:description" content="某石油大学软件工程在读大学生，Java后端学习者，前端不太涉足，此博客用来记录学习与生活。">
+<meta property="og:description" content="UML 介绍：1997年，OMG 组织（Object Management Group对象管理组织）发布了统一建模语言（Unified Modeling Language，UML）。UML 是一种编制软蓝图的标准化语言，它的目标之一就是为开发团队提供标准通用的设计语言来开发和构建计算机应用。UML 提出了一套 IT 专业人员期待多年的统一的标准建模符号。通过使用UML，这些人员能够阅读和交流系统">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22uml.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E6%B3%9B%E5%8C%96%E5%85%B3%E7%B3%BB.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E5%AE%9E%E7%8E%B0%E5%85%B3%E7%B3%BB.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E8%87%AA%E5%85%B3%E8%81%94.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E8%81%9A%E5%90%88%E5%85%B3%E7%B3%BB.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E7%BB%84%E5%90%88%E5%85%B3%E7%B3%BB.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E7%94%A8%E4%BE%8B%E5%9B%BE.jpg">
+<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.22%E6%97%B6%E5%BA%8F%E5%9B%BE.jpg">
+<meta property="article:published_time" content="2020-02-22T14:05:54.000Z">
+<meta property="article:modified_time" content="2020-02-22T14:20:11.926Z">
 <meta property="article:author" content="许郭">
-<meta property="article:tag" content="后端">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Spring">
-<meta property="article:tag" content="SpringBoot">
-<meta property="article:tag" content="Redies">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="开源">
+<meta property="article:tag" content="-UML建模">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xuguo.top/assets/blogImg/20.2.22uml.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Xu &amp; Blog" type="application/atom+xml">
   
@@ -163,35 +169,98 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Git实现代码远程托管" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-UML建模学习-类图，用例图，时序图" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/">Git实现代码远程托管</a>
+    <h1 class="article-title" itemprop="name">
+      UML建模学习---类图，用例图，时序图
     </h1>
   
 
         
-        <a href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/" class="archive-article-date">
-  	<time datetime="2019-10-27T04:01:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
+        <a href="/2020/02/22/UML%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0-%E7%B1%BB%E5%9B%BE%EF%BC%8C%E7%94%A8%E4%BE%8B%E5%9B%BE%EF%BC%8C%E6%97%B6%E5%BA%8F%E5%9B%BE/" class="archive-article-date">
+  	<time datetime="2020-02-22T14:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="☀前言："><a href="#☀前言：" class="headerlink" title="☀前言："></a>☀前言：</h2><p>一直想将代码可以直接远程传到Github上，操作起来才发现原来我对Git是如此愚钝，今天忙活了几个小时，终于成功上传了第一个源码。<br>对Git的操作也有了一点了解，日后还是要好好学习一下git操作语言。<br>在这里还是对下午的苦逼操作做下总结，我的学习操作途径主要还是通过☛Git教程 - 廖雪峰的官方网☜+B站，B站上有个传智播客的视频，但是不是太完整。<br>个人感觉在建立连接方面讲的不是太详细。下面就回顾下我的操作过程。</p>
+        <p><img src="/assets/blogImg/20.2.22uml.jpg" alt="avatar"></p>
+<h2 id="UML-介绍："><a href="#UML-介绍：" class="headerlink" title="UML 介绍："></a>UML 介绍：</h2><p>1997年，OMG 组织（Object Management Group对象管理组织）发布了<strong>统一建模语言</strong>（<strong>U</strong>nified <strong>M</strong>odeling <strong>L</strong>anguage，UML）。UML 是一种编制软蓝图的标准化语言，它的目标之一就是为开发团队提供标准通用的设计语言来开发和构建计算机应用。UML 提出了一套 IT 专业人员期待多年的统一的标准建模符号。通过使用UML，这些人员能够阅读和交流系统架构和设计规划。UML支持面向对象的技术，能够准确的方便地表达面向对像的概念，体现面向对象的分析和设计风格.<a id="more"></a></p>
 <hr>
-        
-          <a class="article-more-a" href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/#more">more >></a>
-        
+<h2 id="一-类图-Class-Diagram"><a href="#一-类图-Class-Diagram" class="headerlink" title="一. 类图(Class Diagram)"></a>一. 类图(Class Diagram)</h2><h3 id="类与类之间的6种关系："><a href="#类与类之间的6种关系：" class="headerlink" title="类与类之间的6种关系："></a>类与类之间的6种关系：</h3><p><strong>泛化关系</strong>（is a：Cat is an Animal）:类和类，接口和接口之间的继承</p>
+<p><img src="/assets/blogImg/20.2.22%E6%B3%9B%E5%8C%96%E5%85%B3%E7%B3%BB.jpg" alt="avatar"></p>
+<p><strong>实现关系</strong>（like a:Cook like a FoodMenu）：类实现接口</p>
+<p><img src="/assets/blogImg/20.2.22%E5%AE%9E%E7%8E%B0%E5%85%B3%E7%B3%BB.jpg" alt="avatar"></p>
+<p><strong>关联关系</strong>：（has a:Programmer has a computer）</p>
+<p><img src="/assets/blogImg/20.2.22%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB.jpg" alt="avatar"></p>
+<p><img src="/assets/blogImg/20.2.22%E8%87%AA%E5%85%B3%E8%81%94.jpg" alt="avatar"></p>
+<p><strong>聚合关系</strong>：</p>
+<ul>
+<li>聚合关系描述的是整体和局部的关系，聚合关系是比较特殊的关联关系。比如：一个教室中有多个学生，教室和学生的关系就是整体和部分的关系，在聚合关系中，整体的生命周期不会决定部分的生命周期。例如：教室没了，学生还在，或者说学生走了，教室还在。</li>
+</ul>
+<p><img src="/assets/blogImg/20.2.22%E8%81%9A%E5%90%88%E5%85%B3%E7%B3%BB.jpg" alt="avatar"></p>
+<p><strong>组合关系</strong>：</p>
+<ul>
+<li>组合关系可以看做是一种特殊的聚合关系，整体的生命周期是决定部分的生命周期，部分是依赖在整体上面的，部分离开整体是无法”存在的”。例如：人和四肢的关系。</li>
+</ul>
+<p><img src="/assets/blogImg/20.2.22%E7%BB%84%E5%90%88%E5%85%B3%E7%B3%BB.jpg" alt="avatar"></p>
+<p><strong>依赖关系</strong>：</p>
+<p>依赖关系是所有关系中最弱的一种，这种关系通常体现在类和局部变量之间。</p>
+<p><img src="/assets/blogImg/20.2.22%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB.jpg" alt="avatar"></p>
+<hr>
+<h2 id="二-用例图-Use-Case-Diagram"><a href="#二-用例图-Use-Case-Diagram" class="headerlink" title="二. 用例图(Use Case Diagram)"></a>二. 用例图(Use Case Diagram)</h2><ul>
+<li>站在系统用户（系统角色）的角度分析系统存在哪些功能。</li>
+<li>实现用例图的时候，需要先进行系统角色的抽取。</li>
+<li>在Rational Rose工具中一般会在 Use Case View 中实现用例图</li>
+</ul>
+<p><img src="/assets/blogImg/20.2.22%E7%94%A8%E4%BE%8B%E5%9B%BE.jpg" alt="avatar"></p>
+<hr>
+<h2 id="三-时序图-Sequence-Diagram"><a href="#三-时序图-Sequence-Diagram" class="headerlink" title="三. 时序图(Sequence Diagram)"></a>三. 时序图(Sequence Diagram)</h2><ul>
+<li>时序图当中描述了方法的调用过程，程序的执行流程，以及方法执行结束的返回值。</li>
+<li>时序图通常在Rational Rose的Logical View中实现</li>
+<li>用例图当中的一个用例会对应时序图当中的一个时序图。时序图描述的是一个功能具体是怎么实现的，流程是什么？</li>
+<li>时序图是最最最重要的</li>
+</ul>
+<p><img src="/assets/blogImg/20.2.22%E6%97%B6%E5%BA%8F%E5%9B%BE.jpg" alt="avatar"></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -202,7 +271,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-实用工具</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-UML建模</a>
         		</li>
       		
 		</ul>
@@ -211,16 +280,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/27/Git%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%BF%9C%E7%A8%8B%E6%89%98%E7%AE%A1/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://xuguo.top/2020/02/22/UML%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0-%E7%B1%BB%E5%9B%BE%EF%BC%8C%E7%94%A8%E4%BE%8B%E5%9B%BE%EF%BC%8C%E6%97%B6%E5%BA%8F%E5%9B%BE/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/21/Rational-Rose-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Rational Rose 异常处理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -240,88 +368,14 @@
 
 
 
-
-  
-    <article id="post-ADO-Net-数据库连接" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/07/ADO-Net-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/">ADO.Net-数据库连接</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/07/ADO-Net-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/" class="archive-article-date">
-  	<time datetime="2019-08-07T04:53:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>ADO .NET会提供最直接的方法，让开发人员在 <strong><em>.NET Framework</em></strong> 中进行资料存取。而要想实现对数据库进行访问，以及增删查改的操作，就要充分利用好<strong>ADO.net</strong>提供的类库：<strong>Connection 类</strong>，<strong>Command对象</strong>，<strong>DataReader类</strong>，<strong>DataTable类</strong>，<strong>DataAdapter类</strong>等。下面就说下我在建立与数据库进行交互过程的步骤及一些想法。</p>
-        
-          <a class="article-more-a" href="/2019/08/07/ADO-Net-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-C#学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/07/ADO-Net-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -344,8 +398,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
