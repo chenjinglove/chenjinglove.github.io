@@ -6,22 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xuguo.top">
-  <title>Java学习---多线程 | Xu &amp; Blog</title>
+  <title>相册 | Xu &amp; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言： 我之前在学习C#时，对多线程有过一定了解，但是与Java中的多线程又有不少差别。包括在创建多线程时，我个人感觉C#的语法要简介很多，但是JDK5.0之后java的线程池就很方便使用了。">
+  <meta name="description" content="八一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java学习---多线程">
-<meta property="og:url" content="http://xuguo.top/2020/02/18/Java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
+<meta property="og:title" content="相册">
+<meta property="og:url" content="http://xuguo.top/2020/02/28/%E7%9B%B8%E5%86%8C/index.html">
 <meta property="og:site_name" content="Xu &amp; Blog">
-<meta property="og:description" content="前言： 我之前在学习C#时，对多线程有过一定了解，但是与Java中的多线程又有不少差别。包括在创建多线程时，我个人感觉C#的语法要简介很多，但是JDK5.0之后java的线程池就很方便使用了。">
-<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.18%E5%A4%9A%E7%BA%BF%E7%A8%8B.jpg">
-<meta property="og:image" content="http://xuguo.top/assets/blogImg/20.2.18%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg">
-<meta property="article:published_time" content="2020-02-18T12:35:37.000Z">
-<meta property="article:modified_time" content="2020-02-18T13:00:24.018Z">
+<meta property="og:description" content="八一">
+<meta property="article:published_time" content="2020-02-28T06:35:37.000Z">
+<meta property="article:modified_time" content="2020-02-28T06:35:59.903Z">
 <meta property="article:author" content="许郭">
-<meta property="article:tag" content="-Java">
+<meta property="article:tag" content="-相册">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://xuguo.top/assets/blogImg/20.2.18%E5%A4%9A%E7%BA%BF%E7%A8%8B.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Xu &amp; Blog" type="application/atom+xml">
   
@@ -161,86 +158,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java学习-多线程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-相册" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java学习---多线程
+      相册
     </h1>
   
 
         
-        <a href="/2020/02/18/Java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-02-18T12:35:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
+        <a href="/2020/02/28/%E7%9B%B8%E5%86%8C/" class="archive-article-date">
+  	<time datetime="2020-02-28T06:35:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p><img src="/assets/blogImg/20.2.18%E5%A4%9A%E7%BA%BF%E7%A8%8B.jpg" alt="avatar"></p>
-<p>我之前在学习C#时，对多线程有过一定了解，但是与Java中的多线程又有不少差别。包括在创建多线程时，我个人感觉C#的语法要简介很多，但是JDK5.0之后java的线程池就很方便使用了。<a id="more"></a></p>
-<hr>
-<h2 id="一-多线程的创建"><a href="#一-多线程的创建" class="headerlink" title="一.多线程的创建"></a>一.多线程的创建</h2><h3 id="方式一：继承于Thread类"><a href="#方式一：继承于Thread类" class="headerlink" title="方式一：继承于Thread类"></a>方式一：继承于Thread类</h3><ol>
-<li>创建一个继承于Thread 的子类</li>
-<li>重写Thread 的run（）方法  –&gt;将此线程执行的操作声明在run()中</li>
-<li>创建子类的对象</li>
-<li>通过子类调用Thread的start（）</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">           <span class="keyword">if</span> (i%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">               System.out.println(i);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        MyThread myThread = <span class="keyword">new</span> MyThread();</span><br><span class="line">        myThread.start();<span class="comment">//1.启动当前线程  2.调用当前线程的run()</span></span><br><span class="line">        <span class="comment">//注意不能直接  myThread.run(); 这样没有开启新的线程</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//若要再开启一个线程  ，就要重新创建一个对象</span></span><br><span class="line">        MyThread myThread1=<span class="keyword">new</span> MyThread();</span><br><span class="line">        myThread1.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="方式二：实现Runnable接口"><a href="#方式二：实现Runnable接口" class="headerlink" title="方式二：实现Runnable接口"></a>方式二：实现Runnable接口</h3><ol>
-<li>创建一个实现Runnable接口的类</li>
-<li>实现类去实现Runnable中的run方法</li>
-<li>创建实现类的对象</li>
-<li>将此对象作为参数传递到Thread的构造器中，创建Thread类的对象</li>
-<li>通过对象调用start()</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadTest1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建实现类的对象</span></span><br><span class="line">        MyThread m1=<span class="keyword">new</span> MyThread();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将此对象作为参数传递到Thread的构造器中，创建Thread类的对象</span></span><br><span class="line">        <span class="keyword">new</span> Thread(m1).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//1.创建一个实现Runnable接口的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实现类去实现Runnable中的run方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">            System.out.println(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="方式三：实现Callable接口-JDK5-0后"><a href="#方式三：实现Callable接口-JDK5-0后" class="headerlink" title="方式三：实现Callable接口(JDK5.0后)"></a>方式三：实现Callable接口(JDK5.0后)</h3><p><strong>说明：</strong></p>
-<ul>
-<li>call()可以有返回值</li>
-<li>call()可以抛出异常</li>
-<li>Callable是支持泛型的</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建一个实现Callable的实现类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NewThread</span> <span class="keyword">implements</span> <span class="title">Callable</span></span>&#123;</span><br><span class="line">    <span class="comment">//2.声明call方法，将此线程要执行的操作声明在call()中</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;<span class="number">100</span> ; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(i%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                System.out.println(i);</span><br><span class="line">                sum+=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadNew</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//2.创建Callable接口实现类的对象</span></span><br><span class="line">        NewThread newThread = <span class="keyword">new</span> NewThread();</span><br><span class="line">        <span class="comment">//3.将实现类的对象作为参数传递到FutureTask构造器中，创建FutureTask的对象</span></span><br><span class="line">        FutureTask futureTask = <span class="keyword">new</span> FutureTask(newThread);</span><br><span class="line">        <span class="comment">//4.将FutureTask的对象作为参数传递到Thread的构造器中，创建对象并调用start方法</span></span><br><span class="line">        <span class="keyword">new</span> Thread(futureTask).start();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Object sum= futureTask.get();</span><br><span class="line">            System.out.println(sum);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="方式四：使用线程池"><a href="#方式四：使用线程池" class="headerlink" title="方式四：使用线程池"></a>方式四：使用线程池</h3><p><strong>优点：</strong></p>
-<ul>
-<li>提高响应速度（减少了创建新线程用的时间）</li>
-<li>降低资源消耗（重复利用线程池中的线程，不需要每次都创建）</li>
-<li>便于线程的管理</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NumberThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">            System.out.println(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadPoll</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.提供指定数量的线程池</span></span><br><span class="line">        ExecutorService service = Executors.newFixedThreadPool(<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//2.执行指定的线程的操作，需要提供实现Runnable或Callable的接口的对象</span></span><br><span class="line">        service.execute(<span class="keyword">new</span> NumberThread());<span class="comment">//适用于Runnable</span></span><br><span class="line">        <span class="comment">//service.submit();//适用于Callable</span></span><br><span class="line">        <span class="comment">//3.关闭连接池</span></span><br><span class="line">        service.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="二-线程的生命周期"><a href="#二-线程的生命周期" class="headerlink" title="二.线程的生命周期"></a>二.线程的生命周期</h2><p><img src="/assets/blogImg/20.2.18%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="avatar"></p>
-<ul>
-<li><p>新建状态:</p>
-<p>使用 <strong>new</strong> 关键字和 <strong>Thread</strong> 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 <strong>start()</strong> 这个线程。</p>
-</li>
-<li><p>就绪状态:</p>
-<p>当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。</p>
-</li>
-<li><p>运行状态:</p>
-<p>如果就绪状态的线程获取 CPU 资源，就可以执行 <strong>run()</strong>，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就绪状态和死亡状态。</p>
-</li>
-<li><p>阻塞状态:</p>
-<p>如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。可以分为三种：</p>
-<ul>
-<li>等待阻塞：运行状态中的线程执行 wait() 方法，使线程进入到等待阻塞状态。</li>
-<li>同步阻塞：线程在获取 synchronized 同步锁失败(因为同步锁被其他线程占用)。</li>
-<li>其他阻塞：通过调用线程的 sleep() 或 join() 发出了 I/O 请求时，线程就会进入到阻塞状态。当sleep() 状态超时，join() 等待线程终止或超时，或者 I/O 处理完毕，线程重新转入就绪状态。</li>
-</ul>
-</li>
-<li><p>死亡状态:</p>
-<p>一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>
-</li>
-</ul>
+        <p>八一</p>
 
       
 
@@ -285,7 +223,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-相册</a>
         		</li>
       		
 		</ul>
@@ -341,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://xuguo.top/2020/02/18/Java%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://xuguo.top/2020/02/28/%E7%9B%B8%E5%86%8C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -355,18 +293,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/21/Rational-Rose-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Rational Rose 异常处理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/14/Java%E5%AD%A6%E4%B9%A0-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java学习---单例模式</div>
+    <a href="/2020/02/22/UML%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0-%E7%B1%BB%E5%9B%BE%EF%BC%8C%E7%94%A8%E4%BE%8B%E5%9B%BE%EF%BC%8C%E6%97%B6%E5%BA%8F%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UML建模学习---类图，用例图，时序图</div>
       <i class="icon-circle-right"></i>
     </a>
   
